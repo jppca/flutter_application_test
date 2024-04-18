@@ -53,7 +53,9 @@ class _MyHomePageState extends State<MyHomePage> {
               var res = await Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const SimpleBarcodeScannerPage(),
+                    builder: (context) => const SimpleBarcodeScannerPage(
+                      isShowFlashIcon: true,
+                    ),
                   ));
               setState(() {
                 if (res is String) {
